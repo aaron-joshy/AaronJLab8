@@ -10,15 +10,18 @@ def encode(digit):
     return new_string
 
 
-def decode(digit):
+def decode(string):
+    # Empty string for decoding
     new_string = ''
-    for i in digit:
-        i = int(i)
-        i -= 3
-        if i < 0:
-            i += 10
-        i = str(i)
-        new_string += i
+    for n in string:
+        # iterates through given string and shifts digit back by 3
+        n = int(n)
+        n -= 3
+        if n < 0:
+            n += 10
+        n = str(n)
+        # Adds each digit to decoded string
+        new_string += n
     return new_string
 
 
